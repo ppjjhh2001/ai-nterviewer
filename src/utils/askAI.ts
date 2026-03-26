@@ -7,6 +7,7 @@ export interface ChatMessage {
 
 // 💡 매개변수에 field(직군)가 추가되었습니다!
 export const askAI = async (conversationHistory: ChatMessage[], field: string, experience: '신입' | '경력'): Promise<string> => {
+  const API_KEY = ''; 
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
